@@ -12,6 +12,14 @@
 * 	Template Style
 *
 * ======================================================= */
+.mailchimp{
+  color: #fd5e53;
+  padding-left: 50px;
+  margin-left: 10%;
+  margin-top:20%;
+}
+
+
 body {
   font-family: "Work Sans", Arial, sans-serif;
   font-weight: 400;
@@ -433,6 +441,9 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 20px;
 }
 
+#fh5co-contact-info{
+  margin-left: 30%;
+}
 .fh5co-contact-info ul {
   padding: 0;
   margin: 0;
