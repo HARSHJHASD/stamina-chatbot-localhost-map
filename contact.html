@@ -52,10 +52,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+
 	</head>
 
 
@@ -129,7 +126,10 @@
 			</div>
 		</div>
 	</header>
-	<div id="map" class="fh5co-map"></div>
+
+	<div id="map" class="fh5co-map">
+		<!-- here shows our googlemap -->
+	</div>
 		<!-- END map -->
 
 	<div id="fh5co-contact">
@@ -178,6 +178,7 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -195,9 +196,23 @@
 	<!-- Magnific Popup -->
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
+
 	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
+		<script>
+// Initialize and add the map
+function initMap() {
+// The location of Uluru
+var sharda = {lat: 28.47437267, lng: 77.4823215};
+// The map, centered at Uluru
+var map = new google.maps.Map(
+	document.getElementById('map'), {zoom: 15, center: sharda});
+// The marker, positioned at Uluru
+var marker = new google.maps.Marker({position: sharda, map: map});
+}
+</script>
+<!-- google map api -->
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZF50IqwDmZkLbPX9VWGybkw0AeG6HMJQ&callback=initMap"></script>
+
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
