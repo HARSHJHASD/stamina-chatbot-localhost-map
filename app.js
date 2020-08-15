@@ -4,7 +4,6 @@ const app = express();
 
 app.use(express.static("public"));
 
-
 // all get requests
 app.get("/",function(req,res){
   res.sendFile(__dirname+"/index.html");
